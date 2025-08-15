@@ -1,0 +1,25 @@
+﻿name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Show event & branch
+        run: |
+          echo "Triggered by: ${{ github.event_name }}"
+          echo "On ref: ${{ github.ref }}"
+
+      - name: Run sample checks
+        run: |
+          echo "Running placeholder checks..."
+          echo "OK"
