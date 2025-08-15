@@ -7,5 +7,3 @@ It was created for the GitHub Markdown assignment.
 - Bold and italic text
 - Lists
 
-## Example command
-`git status`
